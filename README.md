@@ -64,3 +64,5 @@ Contact
 For any inquiries or support, please contact:
 
 Email: ulookuglynoob@email.com
+
+Please give us feedback. It really helps!
