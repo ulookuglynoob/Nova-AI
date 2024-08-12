@@ -16,7 +16,7 @@ class PicovoiceUtil {
 
   Future<void> initPicovoice() async {
     _porcupineManager = await PorcupineManager.fromKeywordPaths(
-      "6yhnDSr6v3F6skMY93vu1lbowi60h7GrkaS5wbkaDrTNR5jllPfqFA==",
+      "PICOVOICE-API-KEY",
       ["assets/models/Hey-Nova_en_android_v3_0_0.ppn"],
       (int keywordIndex) async {
         if (keywordIndex == 0) {
