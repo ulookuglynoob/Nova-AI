@@ -6,7 +6,7 @@ import 'package:nova/ui/settings_screen.dart';
 import 'package:flutter_gemini/flutter_gemini.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-const String defaultApiKey = 'AIzaSyAC_V4enMqCSmbh9RhoVzP4LsL-ht8MKe0';
+const String defaultApiKey = 'GEMINI-API-KEY';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
