@@ -1,4 +1,5 @@
 import 'package:flutter_tts/flutter_tts.dart';
+import 'package:permission_handler/permission_handler.dart';
 import 'package:porcupine_flutter/porcupine_manager.dart';
 import 'package:rhino_flutter/rhino_manager.dart';
 
@@ -12,19 +13,20 @@ class PicovoiceUtil {
   late RhinoManager _rhinoManager;
   bool isListeningForCommand = false;
 
-  PicovoiceUtil(this.flutterTts, this.stopAll, this.toggleObjectDetection, this.toggleTextRecognition, this.toggleImageDescription);
+  PicovoiceUtil(this.flutterTts, this.stopAll, this.toggleObjectDetection,
+      this.toggleTextRecognition, this.toggleImageDescription);
 
   Future<void> initPicovoice() async {
+  try {
     _porcupineManager = await PorcupineManager.fromKeywordPaths(
-      "PICOVOICE-API-KEY",
+      "6yhnDSr6v3F6skMY93vu1lbowi60h7GrkaS5wbkaDrTNR5jllPfqFA==",
       ["assets/models/Hey-Nova_en_android_v3_0_0.ppn"],
       (int keywordIndex) async {
         if (keywordIndex == 0) {
-          await stopAll();  // Stop all activities when the wake word is detected
+          await stopAll();
           await flutterTts.speak("Yes?");
-          isListeningForCommand = true;  // Indicate that we're now listening for a command
-          print("Wake word detected");
-          await _startRhinoListening();  // Start Rhino listening for commands
+          isListeningForCommand = true;
+          await _startRhinoListening();
         }
       },
     );
@@ -34,9 +36,7 @@ class PicovoiceUtil {
       "assets/models/Nova_en_android_v3_0_0.rhn",
       (inference) async {
         if (isListeningForCommand) {
-          print("Rhino inference received: $inference");
           if (inference.isUnderstood ?? false) {
-            print("Intent understood: ${inference.intent}");
             if (inference.intent == "objectDetection") {
               await flutterTts.speak("Toggling object detection.");
               toggleObjectDetection();
@@ -49,24 +49,34 @@ class PicovoiceUtil {
             }
           } else {
             await flutterTts.speak("Sorry, I didn't understand that.");
-            print("Intent not understood.");
           }
-          isListeningForCommand = false;  // Reset listening for command flag
+          isListeningForCommand = false;
         }
       },
     );
 
     await _porcupineManager.start();
-    print("Porcupine manager started");
+  } catch (e) {
+    // Handle specific errors related to microphone initialization or other issues
+    print('Error initializing Picovoice: $e');
+    await flutterTts.speak("An error occurred while initializing the microphone.");
   }
+}
+
 
   Future<void> _startRhinoListening() async {
-    await _rhinoManager.process();  // Start processing Rhino commands
+    await _rhinoManager.process();
     print("Rhino listening for commands");
   }
 
   Future<void> dispose() async {
     await _porcupineManager.stop();
-    // No need to stop _rhinoManager as it does not have start/stop methods
+  }
+
+  Future<void> _requestMicPermission() async {
+    var status = await Permission.microphone.status;
+    if (!status.isGranted) {
+      await Permission.microphone.request();
+    }
   }
 }
