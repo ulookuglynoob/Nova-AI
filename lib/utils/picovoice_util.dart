@@ -58,6 +58,7 @@ class PicovoiceUtil {
     await _porcupineManager.start();
   } catch (e) {
     // Handle specific errors related to microphone initialization or other issues
+    toggleObjectDetection();
     print('Error initializing Picovoice: $e');
     await flutterTts.speak("An error occurred while initializing the microphone.");
   }
