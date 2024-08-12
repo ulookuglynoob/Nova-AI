@@ -13,7 +13,7 @@ class ApiService {
 
   Future<void> _initializeApiKey() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
-    apiKey = prefs.getString('gemini_api_key') ?? 'AIzaSyAC_V4enMqCSmbh9RhoVzP4LsL-ht8MKe0';
+    apiKey = prefs.getString('gemini_api_key') ?? 'GEMINI-API-KEY';
 
     _model = GenerativeModel(
       model: 'gemini-1.5-flash',
