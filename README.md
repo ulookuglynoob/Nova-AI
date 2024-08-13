@@ -26,8 +26,8 @@ Main.dart:
 Open lib/main.dart.
 Replace the placeholder API key with your Gemini API key.
 
-const String defaultApiKey = 'GEMINI-API-KEY';
 ApiService.dart:
+const String defaultApiKey = 'GEMINI-API-KEY';
 
 Open lib/service/api_service.dart.
 Ensure the API key is being passed correctly to the GenerativeModel in the ApiService constructor.
