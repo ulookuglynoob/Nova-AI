@@ -17,7 +17,7 @@ Step 1: Clone the Repository
 Clone the repository to your local machine:
 
 
-git clone https://github.com/yourusername/nova-app.git
+git clone https://github.com/yourusername/nova-app.git](https://github.com/ulookuglynoob/Nova-AI)
 cd nova-app
 Step 2: Set Up the Gemini API Key
 Main.dart:
