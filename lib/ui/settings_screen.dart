@@ -9,28 +9,35 @@ class SettingsScreen extends StatefulWidget {
 }
 
 class _SettingsScreenState extends State<SettingsScreen> {
-  final TextEditingController _apiKeyController = TextEditingController();
+  final TextEditingController _geminiApiKeyController = TextEditingController();
+  final TextEditingController _picovoiceApiKeyController = TextEditingController();
 
   @override
   void initState() {
     super.initState();
-    _loadApiKey();
+    _loadApiKeys();
   }
 
-  Future<void> _loadApiKey() async {
+  Future<void> _loadApiKeys() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
-    String? apiKey = prefs.getString('gemini_api_key');
-    if (apiKey != null) {
-      _apiKeyController.text = apiKey;
+    String? geminiApiKey = prefs.getString('gemini_api_key');
+    String? picovoiceApiKey = prefs.getString('picovoice_api_key');
+    if (geminiApiKey != null) {
+      _geminiApiKeyController.text = geminiApiKey;
+    }
+    if (picovoiceApiKey != null) {
+      _picovoiceApiKeyController.text = picovoiceApiKey;
     }
   }
 
-  Future<void> _saveApiKey() async {
-    String apiKey = _apiKeyController.text;
+  Future<void> _saveApiKeys() async {
+    String geminiApiKey = _geminiApiKeyController.text;
+    String picovoiceApiKey = _picovoiceApiKeyController.text;
     SharedPreferences prefs = await SharedPreferences.getInstance();
-    await prefs.setString('gemini_api_key', apiKey);
+    await prefs.setString('gemini_api_key', geminiApiKey);
+    await prefs.setString('picovoice_api_key', picovoiceApiKey);
     ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(content: Text('API Key saved successfully!')),
+      const SnackBar(content: Text('API Keys saved successfully!')),
     );
   }
 
@@ -46,20 +53,48 @@ class _SettingsScreenState extends State<SettingsScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const Text(
-              'Enter your custom Gemini API Key for Image Description:',
+              'Instructions to obtain API Keys:',
+              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 16),
+            const Text(
+              '1. To obtain your Gemini API Key for Image Description, go to the Google API page and follow the instructions to create and retrieve your key.',
+              style: TextStyle(fontSize: 16),
+            ),
+            const SizedBox(height: 16),
+            const Text(
+              '2. To obtain your Picovoice API Key for voice commands, go to the Picovoice API page and follow the instructions to create and retrieve your key.',
+              style: TextStyle(fontSize: 16),
+            ),
+            const SizedBox(height: 16),
+            const Text(
+              'Enter your custom Gemini API Key:',
               style: TextStyle(fontSize: 16),
             ),
             const SizedBox(height: 8),
             TextField(
-              controller: _apiKeyController,
+              controller: _geminiApiKeyController,
               decoration: const InputDecoration(
                 border: OutlineInputBorder(),
-                hintText: 'API Key',
+                hintText: 'Gemini API Key',
+              ),
+            ),
+            const SizedBox(height: 16),
+            const Text(
+              'Enter your custom Picovoice API Key:',
+              style: TextStyle(fontSize: 16),
+            ),
+            const SizedBox(height: 8),
+            TextField(
+              controller: _picovoiceApiKeyController,
+              decoration: const InputDecoration(
+                border: OutlineInputBorder(),
+                hintText: 'Picovoice API Key',
               ),
             ),
             const SizedBox(height: 16),
             ElevatedButton(
-              onPressed: _saveApiKey,
+              onPressed: _saveApiKeys,
               child: const Text('Save'),
             ),
           ],
