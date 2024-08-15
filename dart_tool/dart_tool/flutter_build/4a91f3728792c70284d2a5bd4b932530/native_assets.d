@@ -1,0 +1,1 @@
+ C:\\Flutter\\nova\\.dart_tool\\flutter_build\\4a91f3728792c70284d2a5bd4b932530\\native_assets.yaml: 
