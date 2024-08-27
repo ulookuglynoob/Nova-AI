@@ -1,4 +1,4 @@
-<img src="./assets/images/applogo.png" alt="Chatbot UI" width="600">
+<img src="./assets/images/appicon.png" alt="Chatbot UI" width="600">
 NOVA - Navigation and Orientation Visual Assistance
 
 NOVA is an app designed to assist blind or visually impaired individuals in navigating their surroundings. It provides real-time object detection, text recognition, image description, and voice command features to help users better understand their environment.
