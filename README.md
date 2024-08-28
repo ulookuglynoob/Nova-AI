@@ -72,5 +72,3 @@ For any inquiries or support, please contact:
 Email: ulookuglynoob@email.com
 
 Please give us feedback. It really helps!
-
-<img src="./assets/images/appicon.png" alt="Nova" width="500">
