@@ -73,4 +73,4 @@ Email: ulookuglynoob@email.com
 
 Please give us feedback. It really helps!
 
-<img src="./assets/images/applogo.png" alt="Nova" width="300">
+<img src="./assets/images/appicon.png" alt="Nova" width="500">
