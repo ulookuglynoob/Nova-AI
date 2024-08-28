@@ -63,6 +63,7 @@ flutter run
 Contributing
 If you want to contribute to this project, please fork the repository, make your changes, and submit a pull request. Contributions are welcome!
 
+<img src="./assets/images/appicon.png" alt="Nova" width="300">
 License
 No license, the project is open source!
 
