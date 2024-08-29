@@ -1,72 +1,80 @@
 <img src="./assets/images/applogo.png" alt="Nova" width="300">
-NOVA - Navigation and Orientation Visual Assistance
 
-NOVA is an app designed to assist blind or visually impaired individuals in navigating their surroundings. It provides real-time object detection, text recognition, image description, and voice command features to help users better understand their environment.
+# NOVA - Navigation and Orientation Visual Assistance
 
-Features
-Object Detection: Detects objects in the user's surroundings in real-time.
-Text Recognition: Recognizes and reads aloud text from the environment.
-Image Description: Describes captured images using AI.
-Voice Commands: Control the app hands-free by saying "Hey Nova."
-Setup Instructions
+**NOVA** is an app designed to assist blind or visually impaired individuals in navigating their surroundings. It provides several key features:
 
-Prerequisites
+1. **Object Detection**: NOVA detects objects in the user's surroundings in real-time.
+2. **Text Recognition**: The app recognizes and reads aloud text from the environment.
+3. **Image Description**: NOVA describes captured images using AI.
+4. **Voice Commands**: Users can control the app hands-free by saying "Hey Nova."
 
-Flutter: Ensure you have Flutter installed. You can follow the official Flutter installation guide.
+## Setup Instructions
 
-API Keys:
+### Prerequisites
 
-Google Gemini API Key: Required for image description features.
+Make sure you have Flutter installed. You can follow the official Flutter installation guide.
 
-Picovoice API Key: Required for enabling voice command features using Picovoice's Porcupine and Rhino engines.
+### API Keys
 
-Step 1: Clone the Repository
+You'll need the following API keys:
+
+1. **Google Gemini API Key**: Required for image description features.
+2. **Picovoice API Key**: Needed to enable voice command features using Picovoice's Porcupine and Rhino engines.
+
+### Step 1: Clone the Repository
+
 Clone the repository to your local machine:
 
+1. Run the following command in your terminal:
 
-git clone https://github.com/ulookuglynoob/Nova-AI)
-cd nova-app
+git clone https://github.com/ulookuglynoob/Nova-AI cd nova-app
 
-Step 2: Set Up the Gemini API Key
-main.dart:
 
-Open lib/main.dart.
-Replace the placeholder API key with your Gemini API key.
+### Step 2: Set Up the Gemini API Key
 
-ApiService.dart:
-const String defaultApiKey = 'GEMINI-API-KEY';
+1. Open `lib/main.dart`.
+2. Replace the placeholder API key with your Gemini API key.
 
-Open lib/service/api_service.dart.
-Ensure the API key is being passed correctly to the GenerativeModel in the ApiService constructor.
+Example (in `lib/main.dart`):
 
-final String apiKey = 'GEMINI-API-KEY';
+const String geminiApiKey = ‘YOUR-GEMINI-API-KEY’;
 
-Step 3: Set Up the Picovoice API Key
-PicovoiceUtil.dart:
 
-Open lib/utils/picovoice_util.dart.
-Replace the placeholder API key with your Picovoice API key.
+### Step 3: Set Up the Picovoice API Key
 
-const String picovoiceApiKey = 'PICOVOICE-API-KEY';
+1. Open `lib/utils/picovoice_util.dart`.
+2. Replace the placeholder API key with your Picovoice API key.
 
-Step 4: Install Dependencies
+Example (in `lib/utils/picovoice_util.dart`):
+
+const String picovoiceApiKey = ‘YOUR-PICOVOICE-API-KEY’;
+
+
+### Step 4: Install Dependencies
+
 Install all required dependencies by running the following command:
-
 
 flutter pub get
 
-Step 5: Run the App
-Run the app on your preferred device or emulator:
 
+### Step 5: Run the App
+
+Run the app on your preferred device:
 
 flutter run
-Contributing
+
+
+## Contributing
+
 If you want to contribute to this project, please fork the repository, make your changes, and submit a pull request. Contributions are welcome!
 
-License
-No license, the project is open source!
+## License
 
-Contact
+No license – the project is open source!
+
+## Contact
+
 For any inquiries or support, please contact:
 
 Email: ulookuglynoob@email.com
