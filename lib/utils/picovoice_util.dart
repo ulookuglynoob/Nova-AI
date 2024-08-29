@@ -63,6 +63,7 @@ class PicovoiceUtil {
     } catch (e) {
       toggleObjectDetection();
       print('Error initializing Picovoice: $e');
+      await Future.delayed(const Duration(seconds: 2));
       await flutterTts.speak("An error occurred while initializing the microphone.");
     }
   }
