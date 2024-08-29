@@ -28,8 +28,9 @@ Clone the repository to your local machine:
 
 1. Run the following command in your terminal:
 
+```
 git clone https://github.com/ulookuglynoob/Nova-AI cd nova-app
-
+```
 
 ### Step 2: Set Up the Gemini API Key
 
@@ -38,8 +39,9 @@ git clone https://github.com/ulookuglynoob/Nova-AI cd nova-app
 
 Example (in `lib/main.dart`):
 
+```
 const String geminiApiKey = ‘YOUR-GEMINI-API-KEY’;
-
+```
 
 ### Step 3: Set Up the Picovoice API Key
 
@@ -48,22 +50,25 @@ const String geminiApiKey = ‘YOUR-GEMINI-API-KEY’;
 
 Example (in `lib/utils/picovoice_util.dart`):
 
+```
 const String picovoiceApiKey = ‘YOUR-PICOVOICE-API-KEY’;
-
+```
 
 ### Step 4: Install Dependencies
 
 Install all required dependencies by running the following command:
 
+```
 flutter pub get
-
+```
 
 ### Step 5: Run the App
 
 Run the app on your preferred device:
 
+```
 flutter run
-
+```
 
 ## Contributing
 
