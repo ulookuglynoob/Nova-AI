@@ -28,7 +28,7 @@ Clone the repository to your local machine:
 
 1. Run the following command in your terminal:
 
-```
+```bash
 git clone https://github.com/ulookuglynoob/Nova-AI cd nova-app
 ```
 
@@ -39,7 +39,7 @@ git clone https://github.com/ulookuglynoob/Nova-AI cd nova-app
 
 Example (in `lib/main.dart`):
 
-```
+```dart
 const String geminiApiKey = ‘YOUR-GEMINI-API-KEY’;
 ```
 
@@ -50,7 +50,7 @@ const String geminiApiKey = ‘YOUR-GEMINI-API-KEY’;
 
 Example (in `lib/utils/picovoice_util.dart`):
 
-```
+```dart
 const String picovoiceApiKey = ‘YOUR-PICOVOICE-API-KEY’;
 ```
 
@@ -58,7 +58,7 @@ const String picovoiceApiKey = ‘YOUR-PICOVOICE-API-KEY’;
 
 Install all required dependencies by running the following command:
 
-```
+```bash
 flutter pub get
 ```
 
@@ -66,7 +66,7 @@ flutter pub get
 
 Run the app on your preferred device:
 
-```
+```bash
 flutter run
 ```
 
