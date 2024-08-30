@@ -51,7 +51,7 @@ const String geminiApiKey = ‘YOUR-GEMINI-API-KEY’;
 Example (in `lib/utils/picovoice_util.dart`):
 
 ```dart
-const String picovoiceApiKey = ‘YOUR-PICOVOICE-API-KEY’;
+String apiKey = prefs.getString('picovoice_api_key') ?? 'YOUR-PICOVOICE-API-KEY';
 ```
 
 ### Step 4: Install Dependencies
