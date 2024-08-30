@@ -35,18 +35,18 @@ git clone https://github.com/ulookuglynoob/Nova-AI cd nova-app
 ### Step 2: Set Up the Gemini API Key
 
 1. Open `lib/main.dart`.
-2. Replace the placeholder API key with your Gemini API key.
+2. Replace the placeholder API key 'YOUR-GEMINI-API-KEY' with your Gemini API key.
 
 Example (in `lib/main.dart`):
 
 ```dart
-const String geminiApiKey = ‘YOUR-GEMINI-API-KEY’;
+apiKey = prefs.getString('gemini_api_key') ?? 'YOUR-GEMINI-API-KEY';
 ```
 
 ### Step 3: Set Up the Picovoice API Key
 
 1. Open `lib/utils/picovoice_util.dart`.
-2. Replace the placeholder API key with your Picovoice API key.
+2. Replace the placeholder API key 'YOUR-PICOVOICE-API-KEY' with your Picovoice API key.
 
 Example (in `lib/utils/picovoice_util.dart`):
 
