@@ -19,7 +19,7 @@ class PicovoiceUtil {
 
   Future<void> initPicovoice() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
-    String apiKey = prefs.getString('picovoice_api_key') ?? 'default_api_key';
+    String apiKey = prefs.getString('picovoice_api_key') ?? 'YOUR-PICOVOICE-API-KEY';
 
     try {
       _porcupineManager = await PorcupineManager.fromKeywordPaths(
