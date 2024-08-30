@@ -70,9 +70,6 @@ Run the app on your preferred device:
 flutter run
 ```
 
-## Contributing
-
-If you want to contribute to this project, please fork the repository, make your changes, and submit a pull request. Contributions are welcome!
 
 ## License
 
