@@ -73,7 +73,7 @@ flutter run
 
 ## License
 
-No license – the project is open source!
+This project uses the MIT License.
 
 ## Contact
 
