@@ -52,22 +52,6 @@ class TutorialScreen extends StatelessWidget {
                   subtitle: Text('Control the app hands-free by saying "Hey Nova."'),
                 ),
                 const Divider(),
-                const Padding(
-                  padding: EdgeInsets.all(16.0),
-                  child: Text(
-                    'About Us',
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-                  ),
-                ),
-                const Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
-                  child: Text(
-                    'NOVA, which stands for Navigation and Orientation Visual Assistance, '
-                    'is designed to help blind or visually impaired individuals '
-                    'navigate their environment more effectively.',
-                    style: TextStyle(fontSize: 16),
-                  ),
-                ),
               ],
             ),
           ),
