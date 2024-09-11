@@ -64,7 +64,7 @@ class TutorialScreen extends StatelessWidget {
                   child: Text(
                     'NOVA, which stands for Navigation and Orientation Visual Assistance, '
                     'is designed to help blind or visually impaired individuals '
-                    'navigate their environment more effectively.'
+                    'navigate their environment more effectively.',
                     style: TextStyle(fontSize: 16),
                   ),
                 ),
