@@ -9,6 +9,10 @@
 3. **Image Description**: NOVA describes captured images using AI.
 4. **Voice Commands**: Users can control the app hands-free by saying "Hey Nova."
 
+## APK Download
+
+Download the APK file by going to the release page in Github. Download the APK file from there.
+
 ## Setup Instructions
 
 ### Prerequisites
