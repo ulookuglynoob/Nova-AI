@@ -1,5 +1,5 @@
 <img src="./assets/images/applogo.png" alt="Nova" width="300">
-
+<img src="./assets/images/rw.png" alt="CAC" width="300">
 # NOVA - Navigation and Orientation Visual Assistance
 
 **NOVA** is an app designed to assist blind or visually impaired individuals in navigating their surroundings. It provides several key features:
