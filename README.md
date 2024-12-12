@@ -1,4 +1,4 @@
-<img src="./assets/images/applogo.png" alt="Nova" width="300"> <img src="assets/images/rw.jpg" alt="CAC" width="300">
+<img src="./assets/images/applogo.png" alt="Nova" width="300"> 
 
 # NOVA - Navigation and Orientation Visual Assistance
 
