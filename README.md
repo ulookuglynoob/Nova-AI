@@ -9,6 +9,8 @@
 3. **Image Description**: NOVA describes captured images using AI.
 4. **Voice Commands**: Users can control the app hands-free by saying "Hey Nova."
 
+**NOVA** was declared the winner of the Congressional App Challenge for the Kansas Third District in 2024!
+
 ## APK Download
 
 Download the APK file by going to the release page in Github. Download the APK file from there.
